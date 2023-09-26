@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Pais {
+  id                  String   @id @default(uuid())
+  nome                String   @db.VarChar
+  gentilico           String   @db.VarChar
+  extensaoTerritorial Decimal  @db.Decimal
+  capital             String   @db.VarChar
+  continente          String   @db.VarChar
+  governo             String   @db.VarChar
+  idioma              String   @db.VarChar
+  populacao           Decimal  @db.Decimal 
+  moeda               String   @db.VarChar
+  emailDeContato      String   @db.VarChar
+  emailDepartamento   String   @db.VarChar
+  status              String   @db.VarChar
+  dataIngresso        DateTime @db.Date
+}
