@@ -1,0 +1,171 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "País",
+      "description": "Documentação da API do País.",
+      "version": "1.0.0"
+    },
+    "basePath": "/",
+    "paths": {
+      "/api/pais/{id}": {
+        "get": {
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {}
+          }
+        },
+        "delete": {
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "responses": {
+            "202": {
+                "description": "País foi removido com sucesso"
+            },
+            "404": {
+              "description": "País não encontrado"
+            }
+          }
+        }
+      },
+      "/api/pais": {
+        "post": {
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "nome": {
+                      "type": "string"
+                    },
+                    "gentilico": {
+                      "type": "string"
+                    },
+                    "extensaoTerritorial": {
+                      "type": "number"
+                    },
+                    "capital": {
+                      "type": "string"
+                    },
+                    "continente": {
+                      "type": "string"
+                    },
+                    "governo": {
+                      "type": "string"
+                    },
+                    "idioma": {
+                      "type": "string"
+                    },
+                    "populacao": {
+                      "type": "number"
+                    },
+                    "moeda": {
+                      "type": "string"
+                    },
+                    "emailDeContato": {
+                      "type": "string"
+                    },
+                    "emailDepartamento": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "dataIngresso": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "201": {
+                "description": "País criado com sucesso"
+              }
+            }
+          }
+        },
+        "put": {
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "nome": {
+                      "type": "string"
+                    },
+                    "gentilico": {
+                      "type": "string"
+                    },
+                    "extensaoTerritorial": {
+                      "type": "number"
+                    },
+                    "capital": {
+                      "type": "string"
+                    },
+                    "continente": {
+                      "type": "string"
+                    },
+                    "governo": {
+                      "type": "string"
+                    },
+                    "idioma": {
+                      "type": "string"
+                    },
+                    "populacao": {
+                      "type": "number"
+                    },
+                    "moeda": {
+                      "type": "string"
+                    },
+                    "emailDeContato": {
+                      "type": "string"
+                    },
+                    "emailDepartamento": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "dataIngresso": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "201": {
+                "description": "País alterado com sucesso"
+              },
+              "404": {
+                "description": "País não encontrado"
+              }
+            }
+          }
+        },
+        "get": {
+          "responses": {
+            "200": {}
+          }
+        }
+      }
+    }
+  }
+  
