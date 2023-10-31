@@ -12,6 +12,5 @@ const controller = new PaisController();
  paisRoutes.get("/:id", controller.getOne);
  paisRoutes.get("/", controller.getAll);
  paisRoutes.put("/", controller.update);
-
-
+ paisRoutes.patch("/:id", controller.updateStatus);
  export default  paisRoutes;
