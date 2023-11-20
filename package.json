@@ -49,6 +49,7 @@
     "prisma": "^5.3.1",
     "prisma-exclude": "^1.0.2",
     "reflect-metadata": "^0.1.13",
+    "socket.io": "^4.7.2",
     "swagger-ui-express": "^5.0.0",
     "tsyringe": "^4.8.0",
     "uuidv4": "^6.2.13"
